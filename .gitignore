@@ -1,0 +1,6 @@
+/build
+/dist
+/.idea
+__pycache__
+test1.py
+main1-v5.spec

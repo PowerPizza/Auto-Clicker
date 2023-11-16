@@ -5,25 +5,14 @@ class MouseControl:
     _can_stop = 0
     my_mouse = ms_ctrl()
     _t = time.perf_counter()
+    debounce_ = 500
 
-    def __init__(self, debounce_min, debounce_max, debounce_segment, change_after, func=None):
+    def __init__(self, debounce_, func=None):
         """
-        :param debounce_min: how many milliseconds latter button click again. like 20 or 100
-        :param debounce_max: how many milliseconds latter button click again. like 20 or 100
-        debounce_min and debounce_max work together if these both are same so constant cps will be granted
-        but if they are given in a range like min 10 and max 20 so debounce randomly get chosen between the
-        range of min and max. it helps to bypass anti-cheat.
-        :param debounce_segment: how many numbers it will take between debounce_min to debounce_max.
-        :param change_after: after how many seconds cps will change
+        :param debounce_: how many milliseconds latter button click again. like 20 or 100
         :param func: function which called while clicking
         """
-        self._debounce_min = debounce_min
-        self._debounce_max = debounce_max
-        self._debounce_segment = debounce_segment
-        self._change_after = change_after
-        step_ = len(range(debounce_min, debounce_max + 1)) // debounce_segment
-        self._segment_list_ms = list(range(debounce_min, debounce_max + 1, step_ + 1))
-        self._current_debounce = random.choice(self._segment_list_ms) / 1000
+        self.debounce_ = debounce_
         self._func = func
 
     def start_clicking(self, btn, click_repeat=1):
@@ -39,9 +28,7 @@ class MouseControl:
         def _click_():
             while self._can_stop:
                 self.my_mouse.click(btn, click_repeat)
-                time.sleep(self._current_debounce)
-                if int(time.perf_counter()) % self._change_after == 0:
-                    self._current_debounce = random.choice(self._segment_list_ms) / 1000
+                time.sleep(self.debounce_/1000)  # ms to sec conversion.
                 if self._func: self._func()
 
         threading.Thread(target=_click_).start()
@@ -55,14 +42,12 @@ class MouseControl:
 
 if __name__ == '__main__':
     # Testing of MouseControl
-    """
-    from pynput.mouse import Button as pynput_btn
-    ms = MouseControl()
-    time.sleep(10)
-    ms.start_clicking(pynput_btn.left, 0.03, func=lambda : print("clicking.."))
-    time.sleep(2)
-    ms.stop_clicking()
-    """
+    # from pynput.mouse import Button as pynput_btn
+    # ms = MouseControl(500, func=lambda : print("clicking"))
+    # time.sleep(10)
+    # ms.start_clicking(pynput_btn.left, 1)
+    # time.sleep(2)
+    # ms.stop_clicking()
     # working properly
 
 

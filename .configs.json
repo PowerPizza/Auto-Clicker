@@ -1,0 +1,1 @@
+{"WINDOW": {"transparency_max": 1, "transparency_min": 0.4}, "CLICKER": {"debounce": 100, "click_repeat": 1, "start_key": "q", "stop_key": "scroll"}, "BUILDER": {"debounce": 1839, "click_repeat": 1, "start_key": "r", "stop_key": "scroll"}}

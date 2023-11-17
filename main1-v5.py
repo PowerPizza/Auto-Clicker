@@ -126,6 +126,10 @@ def on_click_b():
         elif len(evs) > 1 and evs[2] == pynput_btn.right and start_permission and not ms_clicker.is_running():
             ms_clicker.start_clicking(btn=pynput_btn.left, click_repeat=default_settings["BUILDER"]["click_repeat"])
 
+        elif len(evs) > 1 and evs[2] == pynput_btn.right and start_permission and ms_clicker.is_running():
+            ms_clicker.stop_clicking()
+            btn_build.config(bg="yellow")
+
         elif len(evs) > 1 and evs[2] == 0 and start_permission:
             ms_clicker.stop_clicking()
             btn_build.config(bg="yellow")

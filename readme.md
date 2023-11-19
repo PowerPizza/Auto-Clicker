@@ -1,7 +1,7 @@
 # ![](fab_icon.png) [HEX] Auto-Clicker
 ___
 ## DOWNLOAD [EXE]
-You can download EXE file for windows platform from [here](https://drive.google.com/file/d/1z1kjraVPcFRtISTDvNorAT3EEGhM-kRr/view?usp=drive_link)
+You can download EXE file for windows platform from [here](https://drive.google.com/file/d/1z1kjraVPcFRtISTDvNorAT3EEGhM-kRr/view?usp=sharing)
 
 Keep all the files come with exe in one folder with exe. If any file missing except .configs.json this software will not run I recommend you to create shortcut of exe and put it on desktop to quick startup the software.
 

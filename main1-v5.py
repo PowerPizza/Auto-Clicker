@@ -3,7 +3,7 @@ date : 08-03-2023
 developer : scihack/powerpizza
 description : I don't like to practice clicking so I use python for help!
 """
-import time
+import time, os
 import tkinter, json
 from tkinter import *
 import tkinter.messagebox as messagebox
@@ -34,13 +34,17 @@ default_settings = {
     },
 }
 
+configs_file_path = os.path.join(os.getenv("APPDATA"), "HEX-V5\\configs.json")
+if not os.path.exists(os.path.dirname(configs_file_path)):
+    os.mkdir(os.path.dirname(configs_file_path))
+    
 def load_settings_from_file():
     global default_settings
     try:
-        with open(".configs.json", "r") as fp:
+        with open(configs_file_path, "r") as fp:
             default_settings = json.load(fp)
     except BaseException:
-        with open(".configs.json", "w") as fp:
+        with open(configs_file_path, "w") as fp:
             json.dump(default_settings, fp)
 load_settings_from_file()  # comment this line while testing.
 
@@ -272,7 +276,7 @@ def onClick_Settings():
     options_canvas.pack(fill=BOTH, expand=True)
 
     def on_save_settings():
-        with open(".configs.json", "w") as fp:
+        with open(configs_file_path, "w") as fp:
             json.dump(default_settings, fp)
         settings_root.destroy()
         settings_btn.config(state="normal")

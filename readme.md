@@ -1,9 +1,11 @@
 # ![](fab_icon.png) [HEX] Auto-Clicker
 ___
-## DOWNLOAD [EXE]
-You can download EXE file for windows platform from [here](https://drive.google.com/file/d/1z1kjraVPcFRtISTDvNorAT3EEGhM-kRr/view?usp=sharing)
+## DOWNLOAD [Installer or EXE]
+(Recommended) You can download Installer for windows from [here](https://drive.google.com/file/d/14GlMkg0sQuIZ0rvF0DzHvT2FLV5WkoqN/view?usp=sharing)
 
-Keep all the files come with exe in one folder with exe. If any file missing except .configs.json this software will not run I recommend you to create shortcut of exe and put it on desktop to quick startup the software.
+(For manual download & setup) You can download EXE file for windows platform from [here](https://drive.google.com/file/d/1z1kjraVPcFRtISTDvNorAT3EEGhM-kRr/view?usp=sharing)
+
+If you are using manual download and setup so keep all the files come with exe in one folder with exe. If any file missing except .configs.json this software will not run I recommend you to create shortcut of exe and put it on desktop to quick startup the software.
 
 ---
 ## DOCUMENTATION

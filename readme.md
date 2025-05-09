@@ -1,4 +1,8 @@
-# ![](fab_icon.png) [HEX] Auto-Clicker
+<div style="display: flex; align-items: center;">
+    <img src="fab_icon.png" alt="HEX_ICON" width="80px" />
+    <h1 style="margin: 0px;">Auto-Clicker [HEX]</h1>
+</div>
+
 ___
 ## DOWNLOAD [Installer or EXE]
 (Recommended) You can download Installer for windows from [here](https://drive.google.com/file/d/14GlMkg0sQuIZ0rvF0DzHvT2FLV5WkoqN/view?usp=sharing)

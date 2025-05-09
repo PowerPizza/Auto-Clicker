@@ -1,7 +1,4 @@
-<div style="display: flex; align-items: center;">
-    <img src="fab_icon.png" alt="HEX_ICON" width="80px" />
-    <h1 style="margin: 0px;">Auto-Clicker [HEX]</h1>
-</div>
+<h1 style="display: flex; align-items: center;"> <img src="fab_icon.png" alt="HEX_ICON" width="80px" /> Auto-Clicker [HEX]</h1>
 
 ___
 ## DOWNLOAD [Installer or EXE]
